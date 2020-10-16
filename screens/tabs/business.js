@@ -1,8 +1,8 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, FlatList, Text, View } from 'react-native';
 
 import Article from './src/components/Article';
-
 const url =
   "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=e36b0d2388a6468c881ff644e0836f17";
 
@@ -56,3 +56,8 @@ const styles = {
     backgroundColor: '#fff',
   },
 };
+
+
+//react life cycle
+//class components
+//react and javascript ES6

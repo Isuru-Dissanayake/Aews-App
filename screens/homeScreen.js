@@ -69,15 +69,19 @@ export default function Home(){
         } catch (e) {
         }
         setIsLoading(false);
-      },1000);
+      },2000);
     }, []);
 
-    if (isLoading) {
+    if (isLoading){
       return(
-        <View style={{flex: 1, alignItems:'center', justifyContent:'center'}}>
-          <ActivityIndicator size='large'/>
+        <View style={styles.splachScreen}>
+          <StatusBar
+            backgroundColor = "#fff"
+            barStyle = "dark-content"
+          />
+          <Text style={styles.splashTitle}>Headlines</Text>
         </View>
-      );
+      )
     }
 
     return(
@@ -121,8 +125,23 @@ export default function Home(){
               }
             }}>
               <Stack.Screen  options={{headerShown: false}}  name="Login" component={LoginScreen}/>
+              <Stack.Screen name="Headlines" component={HomeScreenTabs} />
             </Stack.Navigator>
           }
       </NavigationContainer>     
     );
 }
+
+
+const styles=StyleSheet.create({
+    splachScreen:{
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    splashTitle:{
+      fontFamily: 'ProductSans-Bold',
+      fontSize: 24,
+    }
+});

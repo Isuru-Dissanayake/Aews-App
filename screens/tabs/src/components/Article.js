@@ -52,7 +52,7 @@ export default class Article extends React.Component {
             {content}
           </Text>
           <TouchableNativeFeedback onPress={() => Linking.openURL(url)}>
-            <Text style={{color: '#b2bec3', margin: 5,}}>Read more....</Text>
+            <Text style={{color: '#b2bec3', margin: 5,fontFamily: 'ProductSans-Italic',}}>Read more....</Text>
           </TouchableNativeFeedback>
           <TouchableHighlight
             style={styles.closeButton}
@@ -92,13 +92,14 @@ export default class Article extends React.Component {
 const styles = {
   noteStyle: {
     marginTop: 5,
-    fontStyle: 'italic',
+    fontFamily: 'ProductSans-Italic',
     color: '#b2bec3',
     fontSize: 10
   },
   titleStyle: {
+    marginTop: 8,
     fontSize: 18,
-    fontWeight: 'bold',
+    fontFamily: 'ProductSans-Bold'
   },
   boxCon: {
     marginHorizontal: 10,
@@ -120,27 +121,28 @@ const styles = {
   modalTitle: {
     margin: 10,
     fontSize: 18,
-    fontWeight: 'bold',
+    fontFamily: 'ProductSans-Bold'
   },
   modalContent: {
     marginTop: 10,
     marginBottom: 10,
     fontSize: 18,
+    fontFamily: 'ProductSans-Regular'
   },
   
   closeButton: {
     backgroundColor: "#000",
-    width: '60%',
+    width: '30%',
     borderRadius: 20,
     padding: 10,
     marginTop: 10,
     elevation: 2,
     justifyContent: 'flex-end',
-    marginBottom: 36
+    marginBottom: 36,
   },
   textStyle: {
     color: "white",
-    fontWeight: "bold",
+    fontFamily: 'ProductSans-Bold',
     textAlign: "center"
   },
 };
